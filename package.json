@@ -1,0 +1,17 @@
+{
+  "name": "manthan-registration",
+  "version": "1.0.0",
+  "description": "registration for manthan 2016",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "registration",
+    "form",
+    "manthan",
+    "2016"
+  ],
+  "author": "manan",
+  "license": "MIT"
+}

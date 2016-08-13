@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <title>Manthan 2016</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">      
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>           
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script> 
+  <style>
+    /* ---- reset ---- */ body{ margin:0; font:normal 75% Arial, Helvetica, sans-serif; } canvas{ display: block; vertical-align: bottom; } /* ---- particles.js container ---- */ #particles-js{ position:absolute; width: 100%; height: 200%; background-color: #000000; background-image: url(""); background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; } 
+
+  </style>
+</head>
+<body>
+  <!-- particles.js container --> 
+  <div style="position: absolute;width:100%;z-index: 100;top:5px;">
+
+    <div class="row">
+      <div class="col s12 m3 l3 hide-on-small-only">
+        .
+      </div>
+      <div class="col s12 m6 l6" style="background:#FFFFFF;">
+
+        <form class="col s12 m12 l12" action="/addUser" method="post">
+          <div class="row">
+            <div class="input-field col s12"><center>
+              <img src="images/head.png" alt="logo" width="100%" class="responsive-img valign">
+              </center>
+              <p class="center-align manthan">MANTHAN 2016 REGISTRATION</p>
+            </div>
+          </div>        Fields marked with * are required
+
+          <div class="row margin">
+            <div class="input-field col s12">
+              <input id="name" name="fullname" type="text" class="validate" required="" aria-required="true">
+              <label for="name">Full Name*</label>
+            </div>
+          </div>
+          <div class="row margin">
+            Leave the field below empty if you don't have a roll no yet.
+            <div class="input-field col s12">
+              <input id="roll_no" name="rollno" type="text" class="validate" aria-required="true">
+              <label for="roll_no">Roll No e.g IT-2160-2K14</label>
+            </div>
+          </div>
+          <div class="row margin">
+            <div class="input-field col s12">
+              <select name="branch" id="branch" required="">
+                <option value="" disabled selected>Choose your option</option>
+                <option value="CE">Computers</option>
+                <option value="IT">Information Technology</option>
+                <option value="EL">Electrical</option>
+                <option value="ECE">ECE</option>
+                <option value="EIC">EIC</option>
+                <option value="ME">Mechanical</option>
+              </select>
+              <label>Branch*</label>
+            </div>
+          </div>
+          <div class="row margin">
+            <div class="input-field col s12">
+              <select name="year" id="year" required="">
+                <option value="" disabled selected>Choose your option</option>
+                <option value="1">1st</option>
+                <option value="2">2nd</option>
+                <option value="3">3rd</option>
+              </select>
+              <label>Year*</label>
+            </div>
+          </div>
+          <div class="row margin">
+            We will send you regular updates via email :)
+            <div class="input-field col s12">
+              <input class="validate" id="email" name="email" type="email" required="" aria-required="true">
+              <label for="email" data-error="wrong" data-success="right" class="center-align">Email*</label>
+            </div>
+          </div>
+          <div class="row margin">
+            <div class="input-field col s12">
+              <input id="contact_no" name="phone" type="text" class="validate" required="" aria-required="true" value="+91">
+              <label for="contact_no">Contact No*</label>
+            </div>
+          </div>
+          <div class="row margin">
+            You can include links of your profiles on codeforces, codechef, topcoder, hackerearth etc
+            <div class="input-field col s12">
+              <input id="codingprofilelinks" name="codingprofilelinks" type="text" class="validate">
+              <label for="codingprofilelinks">Competitive Coding Profiles</label>
+            </div>
+          </div>
+          <div class="row margin">
+            You can include links of your profiles on github, bitbucket etc 
+            <div class="input-field col s12">
+              <input id="Github" name="opensourcelinks" type="text" class="validate">
+              <label for="Github">Open source profiles</label>
+            </div>
+          </div>
+
+          <div class="row margin">
+            <div class="input-field col s12">
+              <textarea id="other_handle" name="otherprofiles" class="materialize-textarea"></textarea>
+              <label for="Other_handle">Any Other Profiles</label>
+            </div>
+          </div>
+          <div class="row margin">
+            <div class="input-field col s12">
+              <select name="project" required>
+                <option value="" disabled selected>Yes/No</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+              </select>
+              <label>Do you have any project to showcase personally? *</label>
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="input-field col s6">
+              <button class="btn waves-effect waves-light col s12" type="submit" name="action">Register</button>
+            </div>
+          </div>
+        </div>
+      </form>
+      <script type="text/javascript">
+        $(document).ready(function() {
+          $('select').material_select();
+          Materialize.updateTextFields();
+        });
+      </script>
+    </div>
+  </div>
+</div>
+<div id="particles-js">
+
+</div>  
+<!-- particles.js lib - https://github.com/VincentGarreau/particles.js --> 
+<script src="particles.min.js"></script> 
+<!-- stats.js lib --> 
+<script>
+  particlesJS("particles-js", {"particles":{"number":{"value":80,"density":{"enable":true,"value_area":800}},"color":{"value":"#ffffff"},"shape":{"type":"circle","stroke":{"width":0,"color":"#000000"},"polygon":{"nb_sides":5},"image":{"src":"img/github.svg","width":100,"height":100}},"opacity":{"value":0.5,"random":false,"anim":{"enable":false,"speed":1,"opacity_min":0.1,"sync":false}},"size":{"value":3,"random":true,"anim":{"enable":false,"speed":40,"size_min":0.1,"sync":false}},"line_linked":{"enable":true,"distance":150,"color":"#ffffff","opacity":0.4,"width":1},"move":{"enable":true,"speed":6,"direction":"none","random":false,"straight":false,"out_mode":"out","bounce":false,"attract":{"enable":false,"rotateX":600,"rotateY":1200}}},"interactivity":{"detect_on":"canvas","events":{"onhover":{"enable":true,"mode":"grab"},"onclick":{"enable":true,"mode":"push"},"resize":true},"modes":{"grab":{"distance":400,"line_linked":{"opacity":1}},"bubble":{"distance":400,"size":40,"duration":2,"opacity":8,"speed":3},"repulse":{"distance":200,"duration":0.4},"push":{"particles_nb":4},"remove":{"particles_nb":2}}},"retina_detect":true});var count_particles, stats, update;  stats.setMode(0); stats.domElement.style.position = 'absolute'; stats.domElement.style.left = '0px'; stats.domElement.style.top = '0px'; document.body.appendChild(stats.domElement); count_particles = document.querySelector('.js-count-particles'); update = function() { stats.begin(); stats.end(); if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) { count_particles.innerText = window.pJSDom[0].pJS.particles.array.length; } requestAnimationFrame(update); }; requestAnimationFrame(update);;
+</script>
+</body>   
+</html>
