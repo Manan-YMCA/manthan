@@ -18,7 +18,7 @@ var db=require('./db');
 //Setting up port
 app.set('port', (process.env.PORT || 5000))
 
-//Process application/x-www-form-urlencoded
+
 app.use(bodyParser.urlencoded({extended: false}))
 
 //Process application/json
