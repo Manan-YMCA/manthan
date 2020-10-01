@@ -1,19 +1,19 @@
-//Import All Required Node Modules
-var express = require('express')
-var bodyParser = require('body-parser')
-var request = require('request')
-var ejs =require("ejs");
+//Import All Required Node Modules with the help of predefined function that is require()
+let express = require('express')
+let bodyParser = require('body-parser')
+let request = require('request')
+let ejs =require("ejs");
 
 
 //Initialize the express app
-var app = express()
+let app = express()
 
 //View engine setup
 app.set('view engine', 'ejs');
 app.set('views', __dirname + '/views');
 app.use(express.static(__dirname + '/public'));
 routes=require('./routes');
-var db=require('./db');
+let db=require('./db');
 
 //Setting up port
 app.set('port', (process.env.PORT || 5000))
